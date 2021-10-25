@@ -1,3 +1,5 @@
+// https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#es6
+
 import {createExerciseFiles} from './00 - Create Course Files.mjs';
 
 const COURSE = {
