@@ -17,17 +17,16 @@ function createCourseFolder(course) {
     });
 }
 
-function createFolderName(course) {
-    return BASE_DIR + course.number + " - " + course.name + "/";
-}
-
 function createCourseFiles(course) {
     for (let i = 0; i < course.lessons.length; i++) {
-        let currentLessonIndex = prefixCurrentLessonIndex(i);
+        const currentLessonIndex = prefixCurrentLessonIndex(i);
+        const fileName = createFileName(course, currentLessonIndex, i);
 
-        fs.writeFile(createFolderName(course) + currentLessonIndex + " - " + course.lessons[i] + ".js", "", (err) => {
-            if (err) throw err;
-        })
+        if (!fs.existsSync(fileName)) {
+            fs.writeFile(fileName, "", (err) => {
+                if (err) throw err;
+            })
+        }
     }
 
     function prefixCurrentLessonIndex(i) {
@@ -43,4 +42,12 @@ function createCourseFiles(course) {
 
         return currentIndex;
     }
+}
+
+function createFolderName(course) {
+    return BASE_DIR + course.number + " - " + course.name + "/";
+}
+
+function createFileName(course, currentLessonIndex, i) {
+    return createFolderName(course) + currentLessonIndex + " - " + course.lessons[i] + ".js";
 }
