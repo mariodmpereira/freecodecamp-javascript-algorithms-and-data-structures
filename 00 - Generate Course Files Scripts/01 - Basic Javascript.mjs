@@ -1,6 +1,4 @@
-const fs = require('fs')
-const path = require('path');
-const BASE_DIR = path.join(__dirname, "../");
+import {createExerciseFiles} from './00 - Create Course Files.mjs';
 
 const COURSE = {
     name: "Basic Javascript",
@@ -117,21 +115,7 @@ const COURSE = {
         "Use Multiple Conditional (Ternary) Operators",
         "Use Recursion to Create a Countdown",
         "Use Recursion to Create a Range of Numbers"
-    ],
-    folder: function () {
-        return BASE_DIR + this.number + " - " + this.name + "/"
-    }
+    ]
 }
 
-// create course folder
-fs.mkdir(COURSE.folder(), {recursive: true}, (err) => {
-    if (err) throw err;
-});
-
-// create course files
-for (let i = 0; i < COURSE.lessons.length; i++) {
-    const currentLessonIndex = i + 1;
-    fs.writeFile(COURSE.folder() + currentLessonIndex + " - " + COURSE.lessons[i] + ".js", "", (err) => {
-        if (err) throw err;
-    })
-}
+createExerciseFiles(COURSE);
