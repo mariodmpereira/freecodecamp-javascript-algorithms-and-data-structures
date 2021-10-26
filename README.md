@@ -1,4 +1,4 @@
-# JavaScript Algorithms and Data Structure
+# freeCodeCamp - JavaScript Algorithms and Data Structure
 
 This is my path on this Javascript certification.
 
