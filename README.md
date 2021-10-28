@@ -2,7 +2,10 @@
 
 This is my path on this Javascript certification.
 
-Please be aware that there is nothing here other than **spoilers**. After all, this is my solution to all of the exercices on this certification.
+Please be aware that there is nothing here other than **spoilers**. After all, this is my solution to all the exercises
+on this certification.
+
+Has of today, 3/10 are completed.
 
 Cheers.
 
