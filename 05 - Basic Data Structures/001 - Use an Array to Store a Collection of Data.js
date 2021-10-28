@@ -1,0 +1,1 @@
+let yourArray = ["Super Mario", 10, true, "Luigi", false]; // Change this line
