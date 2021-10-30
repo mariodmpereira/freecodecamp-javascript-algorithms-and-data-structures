@@ -45,9 +45,9 @@ function createCourseFiles(course) {
 }
 
 function createFolderName(course) {
-    return BASE_DIR + course.number + " - " + course.name + "/";
+    return BASE_DIR + course.number + "-" + course.name.replace(/\s+/g, '-').toLowerCase() + "/";
 }
 
 function createFileName(course, currentLessonIndex, i) {
-    return createFolderName(course) + currentLessonIndex + " - " + course.lessons[i] + ".js";
+    return createFolderName(course) + currentLessonIndex + "-" + course.lessons[i].replace(/\s+/g, '-').toLowerCase() + ".js";
 }

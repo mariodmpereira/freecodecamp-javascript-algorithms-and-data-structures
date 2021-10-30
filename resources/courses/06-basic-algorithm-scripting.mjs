@@ -1,6 +1,6 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-algorithm-scripting
 
-import {createExerciseFiles} from './00 - Create Course Files.mjs';
+import {createExerciseFiles} from '../create-course-files.mjs';
 
 const COURSE = {
     name: "Basic Algorithm Scripting",

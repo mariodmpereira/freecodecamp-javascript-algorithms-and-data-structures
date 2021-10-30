@@ -1,6 +1,6 @@
 // https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#debugging
 
-import {createExerciseFiles} from './00 - Create Course Files.mjs';
+import {createExerciseFiles} from '../create-course-files.mjs';
 
 const COURSE = {
     name: "Debugging",
